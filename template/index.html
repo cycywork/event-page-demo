@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>活動頁模板</title>
+  <meta name="description" content="可重用活動頁框架模板" />
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/utilities.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要內容</a>
+
+  <div class="floatboard" aria-label="快速操作">
+    <button id="toTopBtn" class="floatboard__btn" type="button">TOP</button>
+    <a class="floatboard__btn" href="#notice">NOTICE</a>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="brand" href="#" aria-label="首頁">Event Template</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <nav id="siteNav" class="site-nav" aria-label="主選單">
+        <a href="#hero">Hero</a>
+        <a href="#coupon">Coupon</a>
+        <a href="#product">Product</a>
+        <a href="#award">Award</a>
+        <a href="#booklist">Booklist</a>
+        <a href="#notice">Notice</a>
+      </nav>
+    </div>
+
+    <div class="container sns" aria-label="社群分享">
+      <a href="#" aria-label="Facebook 分享">Facebook</a>
+      <a href="#" aria-label="LINE 分享">LINE</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="hero" class="section hero">
+      <div class="container">
+        <h1>Hero 主視覺區</h1>
+        <p>放置年度主標題、活動期間、主視覺圖。</p>
+      </div>
+    </section>
+
+    <section id="coupon" class="section coupon">
+      <div class="container">
+        <h2>Coupon 優惠區</h2>
+        <div class="card-grid card-grid--3">
+          <article class="card">優惠卡片 A</article>
+          <article class="card">優惠卡片 B</article>
+          <article class="card">優惠卡片 C</article>
+        </div>
+      </div>
+    </section>
+
+    <section id="product" class="section product">
+      <div class="container">
+        <h2>Product 商品區</h2>
+        <div class="card-grid card-grid--4">
+          <article class="card">商品 1</article>
+          <article class="card">商品 2</article>
+          <article class="card">商品 3</article>
+          <article class="card">商品 4</article>
+        </div>
+      </div>
+    </section>
+
+    <section id="award" class="section award">
+      <div class="container">
+        <h2>Award Table 得獎名單</h2>
+        <div class="table-wrap">
+          <table class="award-table">
+            <thead>
+              <tr>
+                <th>獎項</th>
+                <th>得獎者</th>
+                <th>備註</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>獎項 A</td>
+                <td>user_a</td>
+                <td>範例資料</td>
+              </tr>
+              <tr>
+                <td>獎項 B</td>
+                <td>user_b</td>
+                <td>範例資料</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="booklist" class="section booklist">
+      <div class="container">
+        <h2>Booklist 書單區</h2>
+        <ul class="booklist-grid">
+          <li class="card">書單項目 1</li>
+          <li class="card">書單項目 2</li>
+          <li class="card">書單項目 3</li>
+          <li class="card">書單項目 4</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="notice" class="section notice">
+      <div class="container">
+        <h2>Notice 注意事項</h2>
+        <ol>
+          <li>此區可放活動辦法、限制、獎項說明。</li>
+          <li>可依實際專案擴充條列內容。</li>
+          <li>可加上 FAQ 與客服資訊。</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Event Template. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
