@@ -45,6 +45,9 @@ a:hover{text-decoration-line: none;}
 
 @media (min-width: 1025px) and (max-width: 1440px) {
   .main{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
     background: url(../images/main_bg_1440X750.png) top center no-repeat;
     height: 580px;
   }
@@ -57,20 +60,32 @@ a:hover{text-decoration-line: none;}
 
 @media (min-width: 821px) and (max-width: 1024px) {
   .main{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
     background: url(../images/main_bg_1024.png) top center no-repeat;
     height: 540px;
   }
   .gamemain{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
     height: 570px;
   }
 }
 
 @media (min-width: 551px) and (max-width: 820px) {
   .main{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
     background: url(../images/main_bg_md_820.png) top center no-repeat;
     height: 480px;
   }
 .gamemain{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
     height: 470px;
   }
 
@@ -79,10 +94,16 @@ a:hover{text-decoration-line: none;}
 
 @media (min-width: 431px) and (max-width: 550px) {
   .main{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
     background: url(../images/main_bg_md_820.png) top center no-repeat;
     height: 480px;
   }
 .gamemain{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
     height: 450px;
   }
 
@@ -91,6 +112,9 @@ a:hover{text-decoration-line: none;}
 
 @media only screen and (max-width: 430px) {
     .main{
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
       background: url(../images/main_bg_s_430.png) top center no-repeat;
       height: 550px;
     }
@@ -103,7 +127,12 @@ a:hover{text-decoration-line: none;}
     }
 
 
-    .gamemain{height: 500px;}
+    .gamemain{
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 500px;
+}
 
 h3 {
   font-size: 1.4rem!important;
@@ -726,13 +755,16 @@ label {
   color: #ffffff !important;
   font-weight: 600;
   text-decoration-line: none;
-  font-size: 1.8rem;
 }
 
 .btn-w:active,
 .btn-w:hover {
   transform: translateY(10px);
   cursor: pointer;
+}
+
+.btn.btn-w a {
+  font-size: 1.8rem;
 }
 
 .btn.btn-pink:active,
