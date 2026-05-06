@@ -842,13 +842,27 @@ summary:focus-visible {
 }
 
 .winner-table-list {
-  display: grid;
-  gap: .85rem;
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--event-border);
+  border-radius: var(--event-radius-md);
+  background: var(--event-white);
+  box-shadow: var(--event-shadow-soft);
 }
 
-.winner-table-list .table-responsive,
+.winner-table-list .table-responsive {
+  margin-bottom: 0;
+}
+
 .winner-table-list .event-table {
   margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.winner-table-list .table-responsive + .table-responsive .event-table {
+  margin-top: -1px;
 }
 
 /* Coupon */
