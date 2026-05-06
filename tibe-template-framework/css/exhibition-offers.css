@@ -1,0 +1,407 @@
+/* =====================================================
+   Exhibition Offers Template
+   展場限定優惠通用模組
+   ===================================================== */
+
+:root {
+  --expo-blue: #2870c8;
+  --expo-deep-blue: #153f75;
+  --expo-sky: #dff0ff;
+  --expo-light: #f3f9ff;
+  --expo-orange: #ff6538;
+  --expo-yellow: #ffd84d;
+  --expo-card: #d9edff;
+  --expo-text: #1c3d5d;
+  --expo-radius-lg: 28px;
+  --expo-radius-md: 20px;
+  --expo-shadow: 0 8px 20px rgba(40, 112, 200, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--expo-text);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  background: #eef7ff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* =====================================================
+   Section Layout
+   ===================================================== */
+
+.expo-offers-section {
+  position: relative;
+  overflow: hidden;
+  padding: 56px 0 72px;
+  background:
+    linear-gradient(90deg, rgba(40,112,200,.05) 1px, transparent 1px) 0 0 / 48px 100%,
+    linear-gradient(180deg, rgba(40,112,200,.08) 1px, transparent 1px) 0 0 / 100% 56px,
+    var(--expo-light);
+}
+
+.expo-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 1120px;
+}
+
+.expo-title {
+  margin-bottom: 36px;
+  color: var(--expo-blue);
+}
+
+.expo-title h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.expo-title-en {
+  margin: 0 0 4px;
+  font-size: clamp(.8rem, 1.6vw, 1rem);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.expo-info-row {
+  margin-bottom: 44px;
+}
+
+/* =====================================================
+   Map Card
+   ===================================================== */
+
+.expo-map-card {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 10px solid #efd77f;
+  border-radius: 30px 30px 16px 16px;
+  background: #fffaf0;
+  box-shadow: var(--expo-shadow);
+}
+
+.expo-map-trigger {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.expo-map-trigger img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.expo-booth-badge {
+  position: absolute;
+  left: 50%;
+  bottom: -28px;
+  transform: translateX(-50%);
+  min-width: 210px;
+  padding: 8px 22px;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: .04em;
+  border: 3px solid #f7b24a;
+  border-radius: 8px;
+  background: var(--expo-deep-blue);
+  box-shadow: 0 6px 0 rgba(21, 63, 117, .12);
+}
+
+.expo-booth-badge strong {
+  font-size: 1.5em;
+}
+
+/* =====================================================
+   Info Card
+   ===================================================== */
+
+.expo-info-card {
+  position: relative;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 28px 28px 26px;
+  border-radius: var(--expo-radius-lg);
+  background: rgba(255, 255, 255, .72);
+}
+
+.expo-info-cloud {
+  width: fit-content;
+  min-width: 240px;
+  margin: 0 auto 18px;
+  padding: 18px 28px;
+  color: var(--expo-blue);
+  text-align: center;
+  border: 3px solid #cde5ff;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.expo-info-cloud h3 {
+  margin: 0;
+  font-size: clamp(1.3rem, 2.6vw, 2rem);
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.expo-mascot {
+  max-width: 150px;
+  margin: -8px auto 16px;
+}
+
+.expo-info-list {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.expo-info-list li {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.expo-info-list li:last-child {
+  margin-bottom: 0;
+}
+
+.expo-info-list span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 900;
+  border-radius: 999px;
+  background: var(--expo-deep-blue);
+}
+
+.expo-info-list p {
+  margin: 0;
+}
+
+/* =====================================================
+   Offers
+   ===================================================== */
+
+.expo-offers-heading {
+  margin: 8px 0 28px;
+}
+
+.expo-offers-heading span {
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-weight: 900;
+  letter-spacing: .05em;
+  border-radius: 999px;
+  background: var(--expo-orange);
+}
+
+.expo-offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.expo-offer-card {
+  position: relative;
+  min-height: 230px;
+  padding: 42px 22px 26px;
+  text-align: center;
+  border: 2px solid #b7dbff;
+  border-radius: var(--expo-radius-lg);
+  background: var(--expo-card);
+  box-shadow: var(--expo-shadow);
+}
+
+.offer-number {
+  position: absolute;
+  top: -22px;
+  left: -12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  background: var(--expo-orange);
+}
+
+.offer-icon {
+  height: 74px;
+  margin-bottom: 14px;
+}
+
+.offer-icon img {
+  width: auto;
+  max-height: 74px;
+  margin: 0 auto;
+}
+
+.offer-content h3 {
+  margin: 0 0 10px;
+  color: var(--expo-blue);
+  font-size: 1.45rem;
+  font-weight: 900;
+}
+
+.offer-content p,
+.offer-content ul {
+  margin: 0;
+  padding: 0;
+  color: var(--expo-blue);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.55;
+  list-style: none;
+}
+
+.offer-content strong {
+  color: var(--expo-orange);
+  font-size: 1.45em;
+  font-weight: 900;
+}
+
+/* =====================================================
+   Modal
+   ===================================================== */
+
+.expo-map-modal .modal-content {
+  position: relative;
+  border: 0;
+  border-radius: var(--expo-radius-md);
+  background: #fff;
+}
+
+.expo-map-modal .modal-body {
+  padding: 18px;
+}
+
+.expo-map-modal .modal-body img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.expo-modal-close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  color: #555;
+  font-size: 2rem;
+  line-height: 1;
+  border: 0;
+  border-radius: 50%;
+  background: #eee;
+  cursor: pointer;
+}
+
+/* =====================================================
+   Responsive
+   ===================================================== */
+
+@media (max-width: 991.98px) {
+  .expo-offers-section {
+    padding: 44px 0 60px;
+  }
+
+  .expo-info-row {
+    margin-bottom: 36px;
+  }
+
+  .expo-map-card {
+    margin-bottom: 30px;
+  }
+
+  .expo-offers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 22px;
+  }
+
+  .expo-offer-card:last-child {
+    grid-column: 1 / -1;
+    max-width: 420px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .expo-title {
+    margin-bottom: 28px;
+  }
+
+  .expo-map-card {
+    padding: 14px;
+    border-width: 7px;
+    border-radius: 22px 22px 14px 14px;
+  }
+
+  .expo-booth-badge {
+    min-width: 170px;
+    bottom: -24px;
+    font-size: 1rem;
+  }
+
+  .expo-info-card {
+    padding: 22px 18px;
+  }
+
+  .expo-info-cloud {
+    min-width: 210px;
+    padding: 14px 20px;
+  }
+
+  .expo-info-list li {
+    grid-template-columns: 52px 1fr;
+    font-size: .92rem;
+  }
+
+  .expo-offers-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .expo-offer-card,
+  .expo-offer-card:last-child {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .expo-modal-close {
+    top: 8px;
+    right: 8px;
+  }
+}

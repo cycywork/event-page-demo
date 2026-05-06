@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HyRead 線上國際書展｜活動頁模板</title>
+  <meta name="description" content="HyRead 線上國際書展活動頁通用模板">
+  <meta property="og:title" content="HyRead 線上國際書展">
+  <meta property="og:description" content="活動優惠、Gaze 閱讀器優惠、社群活動與活動辦法。">
+  <meta property="og:image" content="images/og.jpg">
+
+  <!-- Bootstrap 4 對應版：如正式站已有載入，可刪除 CDN 並改用既有 css/js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <!-- Font Awesome 用於社交分享按鈕 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/event-framework.css">
+  
+  <!-- 社交分享按鈕樣式 -->
+  <style>
+    .share-buttons {
+      display: flex;
+      gap: 0.45rem;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .share-buttons .fb-share {
+      background: #0866FF;
+      color: white;
+    }
+    
+    .share-buttons .line-share {
+      background: #00B900;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    
+    .share-buttons .line-share:hover {
+      color: black;
+      background: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Go To Top / Info -->
+  <button type="button" id="btnTop" class="float-action float-action--top" aria-label="回到上方">TOP ▲</button>
+  <a href="#note" id="btnNote" class="float-action float-action--note" aria-label="前往活動辦法">INFO ▼</a>
+
+  <!-- Layout：Navbar -->
+  <nav class="event-navbar" id="navbar">
+    <div class="event-container event-navbar__inner">
+      <a class="event-navbar__brand" href="https://ebook.hyread.com.tw/" target="_blank" rel="noopener">
+        <img src="images/hyreadlogo.png" alt="HyRead ebook 電子書店">
+      </a>
+
+      <button class="event-navbar__toggle" type="button" aria-controls="eventNavMenu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="event-navbar__menu" id="eventNavMenu">
+        <a href="#coupon">購書優惠</a>
+        <a href="#gaze">Gaze優惠</a>
+        <a href="#bookfair">台北書展</a>
+        <a href="#social">社群活動</a>
+        <a href="#top100">年度百大</a>
+        <a href="#note">活動辦法</a>
+        
+        <!-- 社交分享按鈕 -->
+        <div class="share-buttons">
+          <!-- FB分享 -->
+          <a class="fb-share" href="https://www.facebook.com/sharer/sharer.php?u=https://ebook.hyread.com.tw/activity/2026tibe/index.html" target="_blank" rel="nofollow" title="分享到Facebook">
+            FB分享
+          </a>
+          
+          <!-- Line分享 -->
+          <a class="line-share" href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Febook.hyread.com.tw%2Factivity%2F2026tibe%2Findex.html" target="_blank" rel="nofollow" title="分享到LINE">
+            LINE分享
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sections：Hero，可只換圖片即可套用不同 UI -->
+  <header class="event-hero" id="top">
+    <section class="hy-kv" data-theme="bookfair" aria-label="HyRead reusable KV">
+      <div class="hy-kv__inner">
+        <div class="hy-kv__visual">
+          <img src="images/kv_pic.png" alt="活動主視覺">
+        </div>
+
+        <div class="hy-kv__content">
+          <p class="hy-kv__eyebrow">HyRead ebook</p>
+          <h1 class="hy-kv__title">
+            2026 台北國際書展<br>
+            電子書優惠活動
+          </h1>
+          <p class="hy-kv__subtitle">閱讀優惠、限定活動、精選書單一次看</p>
+
+          <div class="hy-kv__sale-card">
+            <span class="hy-kv__sale-label">BOOK FAIR SALE</span>
+            <div class="hy-kv__marquee" aria-label="活動優惠方案">
+              <div class="hy-kv__marquee-track">
+                <strong>書展期間3本79折，結帳滿萬再送小夜貓全家套組，數量有限送完為止！！</strong>
+                <strong aria-hidden="true">書展期間3本79折，結帳滿萬再送小夜貓全家套組，數量有限送完為止！！</strong>
+              </div>
+            </div>
+            <small>2026.02.03 - 2026.02.08</small>
+          </div>
+
+          <div class="hy-kv__actions">
+            <a href="#coupon" class="hy-kv__btn hy-kv__btn--primary">查看優惠</a>
+            <a href="#note" class="hy-kv__btn hy-kv__btn--ghost">活動說明</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <!-- 週週有優惠 -->
+    <section class="event-section event-section--notice" id="five-guide">
+      <div class="event-container">
+        <div class="section-heading">
+          <p class="section-heading__eyebrow">Guide</p>
+          <h2>週週有優惠</h2>
+        </div>
+
+        <div class="guide-block">
+          <div class="guide-block__tabs">
+            <article class="coupon coupon--brand">
+              <div class="coupon__badge">BOOK<br>FAIR</div>
+              <div class="coupon__brand-body">
+                <p class="coupon__brand-copy">響應台北國際書展購買<br><strong>500元以上儲值點數方案</strong></p>
+                <a class="coupon__outline-btn" href="#" target="_blank" rel="noopener">儲值去</a>
+              </div>
+              <a class="coupon__brand-footer" href="#" target="_blank" rel="noopener">查看更多優惠 »</a>
+            </article>
+            <article class="coupon coupon--brand">
+              <div class="coupon__badge">BOOK<br>FAIR</div>
+              <div class="coupon__brand-body">
+                <p class="coupon__brand-copy">響應台北國際書展購買<br><strong>500元以上儲值點數方案</strong></p>
+                <a class="coupon__outline-btn" href="#" target="_blank" rel="noopener">儲值去</a>
+              </div>
+              <a class="coupon__brand-footer" href="#" target="_blank" rel="noopener">查看更多優惠 »</a>
+            </article>
+            <article class="coupon coupon--brand">
+              <div class="coupon__badge">BOOK<br>FAIR</div>
+              <div class="coupon__brand-body">
+                <p class="coupon__brand-copy">響應台北國際書展購買<br><strong>500元以上儲值點數方案</strong></p>
+                <a class="coupon__outline-btn" href="#" target="_blank" rel="noopener">儲值去</a>
+              </div>
+              <a class="coupon__brand-footer" href="#" target="_blank" rel="noopener">查看更多優惠 »</a>
+            </article>
+            <article class="coupon coupon--brand">
+              <div class="coupon__badge">BOOK<br>FAIR</div>
+              <div class="coupon__brand-body">
+                <p class="coupon__brand-copy">響應台北國際書展購買<br><strong>500元以上儲值點數方案</strong></p>
+                <a class="coupon__outline-btn" href="#" target="_blank" rel="noopener">儲值去</a>
+              </div>
+              <a class="coupon__brand-footer" href="#" target="_blank" rel="noopener">查看更多優惠 »</a>
+            </article>
+            <article class="coupon coupon--brand">
+              <div class="coupon__badge">BOOK<br>FAIR</div>
+              <div class="coupon__brand-body">
+                <p class="coupon__brand-copy">響應台北國際書展購買<br><strong>500元以上儲值點數方案</strong></p>
+                <a class="coupon__outline-btn" href="#" target="_blank" rel="noopener">儲值去</a>
+              </div>
+              <a class="coupon__brand-footer" href="#" target="_blank" rel="noopener">查看更多優惠 »</a>
+            </article>
+          </div>
+          <p class="guide-block__note">廠商直送、部分商品，不參與全站促銷，商品是否適用折扣/贈品，請購物車結帳顯示為準。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 可重複區塊：得獎公告 / 表格 -->
+    <section class="event-section event-section--notice" id="winner">
+      <div class="event-container">
+        <div class="section-heading">
+          <p class="section-heading__eyebrow">Announcement</p>
+          <h2>得獎公告</h2>
+        </div>
+
+        <div class="winner-table-list">
+          <!-- 紅利點數表格 -->
+          <div class="table-responsive">
+            <table class="table event-table">
+              <thead>
+                <tr>
+                  <th colspan="3">紅利點數</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>example***@mail.com</td>
+                  <td>member***001</td>
+                  <td>hyread***2026</td>
+                </tr>
+                <tr>
+                  <td>reader***@gmail.com</td>
+                  <td>book***168</td>
+                  <td>gaze***888</td>
+                </tr>
+                <tr>
+                  <td>test***user@mail.com</td>
+                  <td>member***002</td>
+                  <td>hyread***001</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 羅技簡報筆表格 -->
+          <div class="table-responsive">
+            <table class="table event-table">
+              <thead>
+                <tr>
+                  <th colspan="3">羅技簡報筆</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>gaze***111</td>
+                  <td>hyread***100</td>
+                  <td>book***200</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 抱枕閱讀架表格 -->
+          <div class="table-responsive">
+            <table class="table event-table">
+              <thead>
+                <tr>
+                  <th colspan="2">抱枕閱讀架</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>member***300</td>
+                  <td>gaze***222</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coupon：優惠卡片區 -->
+    <section class="event-section" id="coupon">
+      <div class="event-container">
+        <div class="section-heading">
+          <p class="section-heading__eyebrow">Coupon</p>
+          <h2>購書優惠</h2>
+        </div>
+
+        <div class="coupon-vertical-grid">
+          <!-- 01：直式折扣券 -->
+          <article class="coupon coupon--vertical" style="--coupon-main: var(--event-primary); --coupon-main-2: var(--event-secondary);">
+            <div class="coupon__date" aria-label="2月2日星期一到2月9日星期一">
+              <span>2.2</span>
+              <span class="coupon__date-dot">一</span>
+              <span class="coupon__date-arrow">▶</span>
+              <span>2.9</span>
+              <span class="coupon__date-dot">一</span>
+            </div>
+
+            <div class="coupon__body">
+              <p class="coupon__eyebrow">響應台北國際書展購買</p>
+              <p class="coupon__desc">500元以上儲值點數方案</p>
+
+              <div class="coupon__big-offer">
+                <span class="coupon__offer-label">回饋</span>
+                <strong class="coupon__offer-num">10%</strong>
+                <span class="coupon__offer-sub">紅利點數</span>
+              </div>
+
+              <div class="coupon__tear-line"></div>
+
+              <a class="coupon__pill-btn" href="#" target="_blank" rel="noopener">儲值去</a>
+            </div>
+          </article>
+
+          <!-- 01：直式折扣券 -->
+          <article class="coupon coupon--vertical" style="--coupon-main: var(--event-primary); --coupon-main-2: var(--event-secondary);">
+            <div class="coupon__date" aria-label="2月2日星期一到2月9日星期一">
+              <span>2.2</span>
+              <span class="coupon__date-dot">一</span>
+              <span class="coupon__date-arrow">▶</span>
+              <span>2.9</span>
+              <span class="coupon__date-dot">一</span>
+            </div>
+
+            <div class="coupon__body">
+              <p class="coupon__eyebrow">響應台北國際書展購買</p>
+              <p class="coupon__desc">500元以上儲值點數方案</p>
+
+              <div class="coupon__big-offer">
+                <span class="coupon__offer-label">回饋</span>
+                <strong class="coupon__offer-num">10%</strong>
+                <span class="coupon__offer-sub">紅利點數</span>
+              </div>
+
+              <div class="coupon__tear-line"></div>
+
+              <a class="coupon__pill-btn" href="#" target="_blank" rel="noopener">儲值去</a>
+            </div>
+          </article>
+
+          <!-- 01：直式折扣券 -->
+          <article class="coupon coupon--vertical" style="--coupon-main: var(--event-primary); --coupon-main-2: var(--event-secondary);">
+            <div class="coupon__date" aria-label="2月2日星期一到2月9日星期一">
+              <span>2.2</span>
+              <span class="coupon__date-dot">一</span>
+              <span class="coupon__date-arrow">▶</span>
+              <span>2.9</span>
+              <span class="coupon__date-dot">一</span>
+            </div>
+
+            <div class="coupon__body">
+              <p class="coupon__eyebrow">響應台北國際書展購買</p>
+              <p class="coupon__desc">500元以上儲值點數方案</p>
+
+              <div class="coupon__big-offer">
+                <span class="coupon__offer-label">回饋</span>
+                <strong class="coupon__offer-num">10%</strong>
+                <span class="coupon__offer-sub">紅利點數</span>
+              </div>
+
+              <div class="coupon__tear-line"></div>
+
+              <a class="coupon__pill-btn" href="#" target="_blank" rel="noopener">儲值去</a>
+            </div>
+          </article>
+
+          <!-- 01：直式折扣券 -->
+          <article class="coupon coupon--vertical" style="--coupon-main: var(--event-primary); --coupon-main-2: var(--event-secondary);">
+            <div class="coupon__date" aria-label="2月2日星期一到2月9日星期一">
+              <span>2.2</span>
+              <span class="coupon__date-dot">一</span>
+              <span class="coupon__date-arrow">▶</span>
+              <span>2.9</span>
+              <span class="coupon__date-dot">一</span>
+            </div>
+
+            <div class="coupon__body">
+              <p class="coupon__eyebrow">響應台北國際書展購買</p>
+              <p class="coupon__desc">500元以上儲值點數方案</p>
+
+              <div class="coupon__big-offer">
+                <span class="coupon__offer-label">回饋</span>
+                <strong class="coupon__offer-num">10%</strong>
+                <span class="coupon__offer-sub">紅利點數</span>
+              </div>
+
+              <div class="coupon__tear-line"></div>
+
+              <a class="coupon__pill-btn" href="#" target="_blank" rel="noopener">儲值去</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="coupon-grid">
+          <article class="coupon-card">
+            <img src="images/coupon_01.png" alt="儲值回饋">
+            <div class="coupon-card__body">
+              <h3>購買儲值點數回饋</h3>
+              <p>購買指定儲值方案，回饋紅利點數。</p>
+              <a class="event-btn" href="#" target="_blank" rel="noopener">看優惠</a>
+            </div>
+          </article>
+
+          <article class="coupon-card">
+            <img src="images/coupon_02.png" alt="全館折扣">
+            <div class="coupon-card__body">
+              <h3>全館購書優惠</h3>
+              <p>活動期間全館指定書籍享優惠。</p>
+              <a class="event-btn" href="#" target="_blank" rel="noopener">立即購書</a>
+            </div>
+          </article>
+
+          <article class="coupon-card">
+            <img src="images/coupon_03.png" alt="限時活動">
+            <div class="coupon-card__body">
+              <h3>限時加碼活動</h3>
+              <p>節慶期間限定抽獎或紅利回饋。</p>
+              <a class="event-btn" href="#" target="_blank" rel="noopener">了解更多</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product：Gaze 商品 / 閱讀器區 -->
+    <section class="event-section event-section--accent" id="gaze">
+      <div class="event-container">
+        <div class="section-heading">
+          <p class="section-heading__eyebrow">Gaze</p>
+          <h2>Gaze 閱讀器優惠</h2>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <img src="images/product_gaze_01.png" alt="Gaze 閱讀器套裝組">
+            <div class="product-card__body">
+              <h3>Gaze 閱讀器套裝組</h3>
+              <p class="product-card__price">限時優惠 NT$ 6,690 起</p>
+              <p>適合通勤、旅行與日常閱讀。</p>
+              <a class="event-btn" href="#" target="_blank" rel="noopener">看優惠</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img src="images/product_gaze_02.png" alt="Gaze 周邊配件">
+            <div class="product-card__body">
+              <h3>周邊配件</h3>
+              <p class="product-card__price">限時優惠 79 折起</p>
+              <p>保護套、配件、閱讀輔助商品。</p>
+              <a class="event-btn" href="#" target="_blank" rel="noopener">立即買</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exhibition Offers[S] -->
+    <section class="event-section expo-offers-section" id="bookfair">
+      <div class="event-container expo-wrap">
+        <div class="section-heading">
+          <p class="section-heading__eyebrow">Exclusive Offers</p>
+          <h2>展場限定</h2>
+        </div>
+
+        <div class="expo-info-panel">
+          <div class="expo-info-panel__map">
+            <div class="expo-map-card">
+              <button
+                class="expo-map-trigger"
+                type="button"
+                data-toggle="modal"
+                data-target="#expoMapModal"
+                aria-label="點擊放大展場地圖"
+              >
+                <img src="images/map/map.png" alt="展場位置地圖">
+              </button>
+
+              <div class="expo-booth-badge">
+                就在 <strong>B209</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="expo-info-panel__details">
+            <div class="expo-info-card">
+              <div class="expo-info-cloud">
+                <h3>HyRead in<br>2026 台北國際書展</h3>
+              </div>
+
+              <div class="expo-mascot">
+                <img src="images/info/mascot.png" alt="活動角色圖">
+              </div>
+
+              <ul class="expo-info-list">
+                <li>
+                  <span>日期</span>
+                  <p>2026.2.3（二）－ 2.8（日）</p>
+                </li>
+                <li>
+                  <span>時間</span>
+                  <p>10:00－18:00<br>2.6（五）－ 2.7（六）延長至 22:00<br>2.8（日）延長至 20:00</p>
+                </li>
+                <li>
+                  <span>地點</span>
+                  <p>台北世貿一館 B209<br>台北市信義區五段五號</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="expo-offers-heading text-center">
+          <span>展場限定優惠</span>
+        </div>
+
+        <div class="expo-offers-grid">
+          <article class="expo-offer-card">
+            <div class="offer-number">1</div>
+            <div class="offer-icon">
+              <img src="images/offers/offer_01.png" alt="現場購機">
+            </div>
+            <div class="offer-content">
+              <h3>現場購機</h3>
+              <ul>
+                <li>送 <strong>$100</strong> 折價券</li>
+                <li>5 折嗨讀包</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="expo-offer-card">
+            <div class="offer-number">2</div>
+            <div class="offer-icon">
+              <img src="images/offers/offer_02.png" alt="結帳滿萬">
+            </div>
+            <div class="offer-content">
+              <h3>結帳滿萬</h3>
+              <p>保護殼、手寫膜<br class="d-none d-sm-block">二選一</p>
+            </div>
+          </article>
+
+          <article class="expo-offer-card">
+            <div class="offer-number">3</div>
+            <div class="offer-icon">
+              <img src="images/offers/offer_03.png" alt="展場價">
+            </div>
+            <div class="offer-content">
+              <h3>展場價</h3>
+              <p>周邊配件下殺<br><strong>$47</strong> 元起</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- Exhibition Offers[E] -->
+
+    <!-- Map Modal[S] -->
+    <div class="modal fade expo-map-modal" id="expoMapModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <button type="button" class="expo-modal-close" data-dismiss="modal" aria-label="Close">×</button>
+          <div class="modal-body">
+            <img src="images/map/map_large.png" alt="展場位置放大圖">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Map Modal[E] -->
+
+    <!-- Social / CTA -->
+    <section class="event-section event-section--accent" id="social">
+      <div class="event-container">
+        <div class="section-heading">
+          <p class="section-heading__eyebrow">Social</p>
+          <h2>社群活動</h2>
+        </div>
+
+        <div class="social-campaign-card">
+          <div class="social-prize-area" aria-label="活動獎品">
+            <div class="social-prize-visual">
+              <img src="images/info/mascot.png" alt="活動獎品圖片">
+            </div>
+            <div class="social-prize-text">
+              <p class="prize-count">20 名</p>
+              <h3>HyRead 168 紅利點數</h3>
+              <p>1 點 = 1 元，可於 HyRead ebook 使用。</p>
+            </div>
+          </div>
+
+          <div class="social-info-area" aria-label="活動說明">
+            <div class="social-date-badge">2026.2.3 - 2.8</div>
+            <ol class="social-step-list">
+              <li><span class="step-number">STEP 1</span><p>到官方社群按讚，或加入 HyRead Gaze 官方社團。</p></li>
+              <li><span class="step-number">STEP 2</span><p>曬出活動期間購書訂單，或到實體展位拍照打卡。</p></li>
+              <li><span class="step-number">STEP 3</span><p>發文並標記指定 hashtag，完成社群分享任務。</p></li>
+              <li><span class="step-number">STEP 4</span><p>複製貼文連結並填寫抽獎回函，即符合抽獎資格。</p></li>
+            </ol>
+            <a class="event-btn social-form-btn" href="#" target="_blank" rel="noopener">填寫回函</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ranking：年度百大 / 書籍分類 -->
+    <section class="event-section ranking-section" id="top100">
+      <div class="event-container">
+        <div class="section-heading">
+          <p class="section-heading__eyebrow">Top 100</p>
+          <h2>年度百大暢銷</h2>
+        </div>
+
+        <div class="category-nav" aria-label="年度百大暢銷分類選單">
+          <button class="is-active" type="button" data-rank-target="rank-new" aria-controls="rank-new" aria-pressed="true">今年出版</button>
+          <button type="button" data-rank-target="rank-fiction" aria-controls="rank-fiction" aria-pressed="false">文學小說</button>
+          <button type="button" data-rank-target="rank-business" aria-controls="rank-business" aria-pressed="false">財經商管</button>
+          <button type="button" data-rank-target="rank-growth" aria-controls="rank-growth" aria-pressed="false">心靈成長</button>
+          <button type="button" data-rank-target="rank-humanities" aria-controls="rank-humanities" aria-pressed="false">人文社會</button>
+          <button type="button" data-rank-target="rank-life" aria-controls="rank-life" aria-pressed="false">健康生活</button>
+          <button type="button" data-rank-target="rank-science" aria-controls="rank-science" aria-pressed="false">科普藝術</button>
+          <button type="button" data-rank-target="rank-kids" aria-controls="rank-kids" aria-pressed="false">親子童書</button>
+        </div>
+
+        <div class="rank-category is-active" id="rank-new">
+          <div class="rank-category__head">
+            <h3>今年出版</h3>
+            <a href="#" target="_blank" rel="noopener">看更多</a>
+          </div>
+          <div class="book-list book-list--rank">
+            <article class="book-card"><span class="rank-num">01</span><div class="book-card__cover">Book</div><h4>年度新書精選 01</h4></article>
+            <article class="book-card"><span class="rank-num">02</span><div class="book-card__cover">Book</div><h4>年度新書精選 02</h4></article>
+            <article class="book-card"><span class="rank-num">03</span><div class="book-card__cover">Book</div><h4>年度新書精選 03</h4></article>
+            <article class="book-card"><span class="rank-num">04</span><div class="book-card__cover">Book</div><h4>年度新書精選 04</h4></article>
+            <article class="book-card"><span class="rank-num">05</span><div class="book-card__cover">Book</div><h4>年度新書精選 05</h4></article>
+          </div>
+        </div>
+
+        <div class="rank-category" id="rank-fiction" hidden>
+          <div class="rank-category__head">
+            <h3>文學小說</h3>
+            <a href="#" target="_blank" rel="noopener">看更多</a>
+          </div>
+          <div class="book-list book-list--rank">
+            <article class="book-card"><span class="rank-num">01</span><div class="book-card__cover">Book</div><h4>文學小說精選 01</h4></article>
+            <article class="book-card"><span class="rank-num">02</span><div class="book-card__cover">Book</div><h4>文學小說精選 02</h4></article>
+            <article class="book-card"><span class="rank-num">03</span><div class="book-card__cover">Book</div><h4>文學小說精選 03</h4></article>
+            <article class="book-card"><span class="rank-num">04</span><div class="book-card__cover">Book</div><h4>文學小說精選 04</h4></article>
+            <article class="book-card"><span class="rank-num">05</span><div class="book-card__cover">Book</div><h4>文學小說精選 05</h4></article>
+          </div>
+        </div>
+
+        <div class="rank-category" id="rank-business" hidden>
+          <div class="rank-category__head">
+            <h3>財經商管</h3>
+            <a href="#" target="_blank" rel="noopener">看更多</a>
+          </div>
+          <div class="book-list book-list--rank">
+            <article class="book-card"><span class="rank-num">01</span><div class="book-card__cover">Book</div><h4>財經商管精選 01</h4></article>
+            <article class="book-card"><span class="rank-num">02</span><div class="book-card__cover">Book</div><h4>財經商管精選 02</h4></article>
+            <article class="book-card"><span class="rank-num">03</span><div class="book-card__cover">Book</div><h4>財經商管精選 03</h4></article>
+            <article class="book-card"><span class="rank-num">04</span><div class="book-card__cover">Book</div><h4>財經商管精選 04</h4></article>
+            <article class="book-card"><span class="rank-num">05</span><div class="book-card__cover">Book</div><h4>財經商管精選 05</h4></article>
+          </div>
+        </div>
+
+        <div class="rank-category" id="rank-growth" hidden>
+          <div class="rank-category__head">
+            <h3>心靈成長</h3>
+            <a href="#" target="_blank" rel="noopener">看更多</a>
+          </div>
+          <div class="book-list book-list--rank">
+            <article class="book-card"><span class="rank-num">01</span><div class="book-card__cover">Book</div><h4>心靈成長精選 01</h4></article>
+            <article class="book-card"><span class="rank-num">02</span><div class="book-card__cover">Book</div><h4>心靈成長精選 02</h4></article>
+            <article class="book-card"><span class="rank-num">03</span><div class="book-card__cover">Book</div><h4>心靈成長精選 03</h4></article>
+            <article class="book-card"><span class="rank-num">04</span><div class="book-card__cover">Book</div><h4>心靈成長精選 04</h4></article>
+            <article class="book-card"><span class="rank-num">05</span><div class="book-card__cover">Book</div><h4>心靈成長精選 05</h4></article>
+          </div>
+        </div>
+
+        <div class="rank-category" id="rank-humanities" hidden>
+          <div class="rank-category__head">
+            <h3>人文社會</h3>
+            <a href="#" target="_blank" rel="noopener">看更多</a>
+          </div>
+          <div class="book-list book-list--rank">
+            <article class="book-card"><span class="rank-num">01</span><div class="book-card__cover">Book</div><h4>人文社會精選 01</h4></article>
+            <article class="book-card"><span class="rank-num">02</span><div class="book-card__cover">Book</div><h4>人文社會精選 02</h4></article>
+            <article class="book-card"><span class="rank-num">03</span><div class="book-card__cover">Book</div><h4>人文社會精選 03</h4></article>
+            <article class="book-card"><span class="rank-num">04</span><div class="book-card__cover">Book</div><h4>人文社會精選 04</h4></article>
+            <article class="book-card"><span class="rank-num">05</span><div class="book-card__cover">Book</div><h4>人文社會精選 05</h4></article>
+          </div>
+        </div>
+
+        <div class="rank-category" id="rank-life" hidden>
+          <div class="rank-category__head">
+            <h3>健康生活</h3>
+            <a href="#" target="_blank" rel="noopener">看更多</a>
+          </div>
+          <div class="book-list book-list--rank">
+            <article class="book-card"><span class="rank-num">01</span><div class="book-card__cover">Book</div><h4>健康生活精選 01</h4></article>
+            <article class="book-card"><span class="rank-num">02</span><div class="book-card__cover">Book</div><h4>健康生活精選 02</h4></article>
+            <article class="book-card"><span class="rank-num">03</span><div class="book-card__cover">Book</div><h4>健康生活精選 03</h4></article>
+            <article class="book-card"><span class="rank-num">04</span><div class="book-card__cover">Book</div><h4>健康生活精選 04</h4></article>
+            <article class="book-card"><span class="rank-num">05</span><div class="book-card__cover">Book</div><h4>健康生活精選 05</h4></article>
+          </div>
+        </div>
+
+        <div class="rank-category" id="rank-science" hidden>
+          <div class="rank-category__head">
+            <h3>科普藝術</h3>
+            <a href="#" target="_blank" rel="noopener">看更多</a>
+          </div>
+          <div class="book-list book-list--rank">
+            <article class="book-card"><span class="rank-num">01</span><div class="book-card__cover">Book</div><h4>科普藝術精選 01</h4></article>
+            <article class="book-card"><span class="rank-num">02</span><div class="book-card__cover">Book</div><h4>科普藝術精選 02</h4></article>
+            <article class="book-card"><span class="rank-num">03</span><div class="book-card__cover">Book</div><h4>科普藝術精選 03</h4></article>
+            <article class="book-card"><span class="rank-num">04</span><div class="book-card__cover">Book</div><h4>科普藝術精選 04</h4></article>
+            <article class="book-card"><span class="rank-num">05</span><div class="book-card__cover">Book</div><h4>科普藝術精選 05</h4></article>
+          </div>
+        </div>
+
+        <div class="rank-category" id="rank-kids" hidden>
+          <div class="rank-category__head">
+            <h3>親子童書</h3>
+            <a href="#" target="_blank" rel="noopener">看更多</a>
+          </div>
+          <div class="book-list book-list--rank">
+            <article class="book-card"><span class="rank-num">01</span><div class="book-card__cover">Book</div><h4>親子童書精選 01</h4></article>
+            <article class="book-card"><span class="rank-num">02</span><div class="book-card__cover">Book</div><h4>親子童書精選 02</h4></article>
+            <article class="book-card"><span class="rank-num">03</span><div class="book-card__cover">Book</div><h4>親子童書精選 03</h4></article>
+            <article class="book-card"><span class="rank-num">04</span><div class="book-card__cover">Book</div><h4>親子童書精選 04</h4></article>
+            <article class="book-card"><span class="rank-num">05</span><div class="book-card__cover">Book</div><h4>親子童書精選 05</h4></article>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center my-4">
+          <a class="event-btn" href="https://ebook.hyread.com.tw/Template/store/eventPage.jsp?id=5444" target="_blank" rel="noopener" title="全部TOP100">全部TOP100</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Note / 活動辦法：放 Footer 前 -->
+    <section class="event-section event-note" id="note">
+      <div class="event-container">
+        <div class="rules-title">
+          <p class="section-heading__eyebrow">Notice</p>
+          <h2>活動辦法</h2>
+          <p class="rules-subtitle">參加活動前，請詳閱以下活動辦法與注意事項</p>
+        </div>
+
+        <div class="rules-block-title">
+          <span class="sparkle">✦</span>
+          <h3>活動重點摘要</h3>
+        </div>
+
+        <div class="rules-summary-grid">
+          <article class="rules-summary-card">
+            <img src="images/rules/icon-calendar.svg" class="summary-icon" alt="">
+            <h4>活動期間</h4>
+            <p>2026.2.3（二）- 2.8（日）<br>10:00 - 18:00</p>
+          </article>
+
+          <article class="rules-summary-card">
+            <img src="images/rules/icon-location.svg" class="summary-icon" alt="">
+            <h4>活動地點</h4>
+            <p>台北世貿展覽一館<br><strong>B209 攤位</strong></p>
+          </article>
+
+          <article class="rules-summary-card">
+            <img src="images/rules/icon-gift.svg" class="summary-icon" alt="">
+            <h4>適用活動</h4>
+            <p>展場限定優惠、滿額贈、<br>社群分享抽獎</p>
+          </article>
+
+          <article class="rules-summary-card">
+            <img src="images/rules/icon-megaphone.svg" class="summary-icon" alt="">
+            <h4>注意事項</h4>
+            <p>優惠與贈品數量有限，<br>送完為止</p>
+          </article>
+        </div>
+
+        <div class="rules-block-title">
+          <span class="sparkle">✦</span>
+          <h3>完整活動辦法</h3>
+        </div>
+
+        <div class="rules-accordion">
+          <details class="rules-item" open>
+            <summary>
+              <span class="rules-icon-wrap">
+                <img src="images/rules/icon-calendar.svg" alt="">
+              </span>
+              <span class="rules-item-title">活動期間與參加資格</span>
+              <span class="rules-divider"></span>
+              <span class="rules-preview">
+                ・活動期間依頁面公告為準。<br>
+                ・參加者須符合各活動指定條件，未滿指定條件者恕無法參加。
+              </span>
+              <span class="rules-arrow"></span>
+            </summary>
+          </details>
+
+          <details class="rules-item">
+            <summary>
+              <span class="rules-icon-wrap">
+                <img src="images/rules/icon-cart.svg" alt="">
+              </span>
+              <span class="rules-item-title">展場優惠說明</span>
+              <span class="rules-divider"></span>
+              <span class="rules-preview">
+                ・展場優惠僅限活動現場使用。<br>
+                ・優惠不得折抵現金或與其他活動合併使用，除非另有說明。
+              </span>
+              <span class="rules-arrow"></span>
+            </summary>
+          </details>
+
+          <details class="rules-item">
+            <summary>
+              <span class="rules-icon-wrap">
+                <img src="images/rules/icon-gift.svg" alt="">
+              </span>
+              <span class="rules-item-title">贈品與抽獎說明</span>
+              <span class="rules-divider"></span>
+              <span class="rules-preview">
+                ・贈品數量有限，送完為止，恕不補發。<br>
+                ・抽獎資格依活動表單填寫內容為準，若資料不完整將喪失資格。
+              </span>
+              <span class="rules-arrow"></span>
+            </summary>
+          </details>
+
+          <details class="rules-item">
+            <summary>
+              <span class="rules-icon-wrap">
+                <img src="images/rules/icon-trophy.svg" alt="">
+              </span>
+              <span class="rules-item-title">得獎公告與領獎方式</span>
+              <span class="rules-divider"></span>
+              <span class="rules-preview">
+                ・得獎名單將公布於指定頁面或社群平台。<br>
+                ・得獎者須於指定期限內完成回覆，逾期視同放棄得獎資格。
+              </span>
+              <span class="rules-arrow"></span>
+            </summary>
+          </details>
+
+          <details class="rules-item">
+            <summary>
+              <span class="rules-icon-wrap">
+                <img src="images/rules/icon-alert.svg" alt="">
+              </span>
+              <span class="rules-item-title">其他注意事項</span>
+              <span class="rules-divider"></span>
+              <span class="rules-preview">
+                ・主辦單位保留活動修改、暫停或終止之權利。<br>
+                ・若有未盡事宜，依主辦單位公告為準，恕不另行通知。
+              </span>
+              <span class="rules-arrow"></span>
+            </summary>
+          </details>
+        </div>
+
+        <div class="rules-contact-card">
+          <img src="images/rules/icon-question.svg" class="contact-icon" alt="">
+          <div class="contact-text">
+            <h3>有任何問題嗎？</h3>
+            <p>如對活動辦法有任何疑問，歡迎洽詢現場工作人員或聯繫客服。</p>
+          </div>
+          <a href="mailto:service@hyread.com.tw" class="contact-btn">聯絡我們</a>
+        </div>
+
+        <p class="rules-footer-note">HyRead 保留活動最終修改、變更、暫停或終止之權利。</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Layout：Footer -->
+  <footer class="event-footer">
+    <div class="event-container">
+      <p>Copyright © 2026 凌網知識 HyRead ebook</p>
+      <p>mail：service@hyread.com.tw</p>
+    </div>
+  </footer>
+
+  <script src="js/event-framework.js"></script>
+</body>
+</html>
